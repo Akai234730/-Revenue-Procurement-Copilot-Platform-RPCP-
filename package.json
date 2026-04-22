@@ -1,0 +1,14 @@
+{
+  "name": "sales-procurement-copilot-platform",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.12.3",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build",
+    "lint:web": "pnpm --filter web lint",
+    "migrate:api": "cd apps/api && python -m alembic upgrade head",
+    "seed:api": "cd apps/api && python -m app.seed",
+    "dev:api": "cd apps/api && python src/app/run.py"
+  }
+}
